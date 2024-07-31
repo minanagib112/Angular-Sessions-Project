@@ -1,3 +1,10 @@
 <app-about></app-about>
-<h1>Hello from App</h1>
+<h1 [class.bg-green-700]="userAge < 30">Hello from App, my name is {{userName}}</h1>
+<h1 [class.bg-yellow-300]="userAge < 30">Hello from App, my age is {{userAge}}</h1>
+<button (click)="changeData()" class="bg-red-500 p-5">Who's is your love ?</button>
 <app-home></app-home>
+
+<h1 class="bg-green-700 text-7xl text-center">Hello {{userName}}</h1>
+<!-- <input type="text" class="bg-white border-2 border-red-500 p-5 text-3xl text-center" [value]="userName"
+  (keyup)="changeInput($event)"> -->
+<input type="text" class="bg-white border-2 border-red-500 p-5 text-3xl text-center" [(ngModel)]="userName">
